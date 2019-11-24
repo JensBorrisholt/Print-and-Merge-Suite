@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{92125993-6E3F-4253-9DDA-7B599C7C9F95}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Demos\Duplicate Printer\DuplicatePrinterDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demos\Duplicate Printer Advanced Demo\DuplicatePrinterAdvancedDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demos\Merge Reports\MergeDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demos\PDF Viewer\PDFViewer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demos\Mega Demo\MegaDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DuplicatePrinterDemo">
+        <MSBuild Projects="Demos\Duplicate Printer\DuplicatePrinterDemo.dproj"/>
+    </Target>
+    <Target Name="DuplicatePrinterDemo:Clean">
+        <MSBuild Projects="Demos\Duplicate Printer\DuplicatePrinterDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DuplicatePrinterDemo:Make">
+        <MSBuild Projects="Demos\Duplicate Printer\DuplicatePrinterDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DuplicatePrinterAdvancedDemo">
+        <MSBuild Projects="Demos\Duplicate Printer Advanced Demo\DuplicatePrinterAdvancedDemo.dproj"/>
+    </Target>
+    <Target Name="DuplicatePrinterAdvancedDemo:Clean">
+        <MSBuild Projects="Demos\Duplicate Printer Advanced Demo\DuplicatePrinterAdvancedDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DuplicatePrinterAdvancedDemo:Make">
+        <MSBuild Projects="Demos\Duplicate Printer Advanced Demo\DuplicatePrinterAdvancedDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MergeDemo">
+        <MSBuild Projects="Demos\Merge Reports\MergeDemo.dproj"/>
+    </Target>
+    <Target Name="MergeDemo:Clean">
+        <MSBuild Projects="Demos\Merge Reports\MergeDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MergeDemo:Make">
+        <MSBuild Projects="Demos\Merge Reports\MergeDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PDFViewer">
+        <MSBuild Projects="Demos\PDF Viewer\PDFViewer.dproj"/>
+    </Target>
+    <Target Name="PDFViewer:Clean">
+        <MSBuild Projects="Demos\PDF Viewer\PDFViewer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PDFViewer:Make">
+        <MSBuild Projects="Demos\PDF Viewer\PDFViewer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MegaDemo">
+        <MSBuild Projects="Demos\Mega Demo\MegaDemo.dproj"/>
+    </Target>
+    <Target Name="MegaDemo:Clean">
+        <MSBuild Projects="Demos\Mega Demo\MegaDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MegaDemo:Make">
+        <MSBuild Projects="Demos\Mega Demo\MegaDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DuplicatePrinterDemo;DuplicatePrinterAdvancedDemo;MergeDemo;PDFViewer;MegaDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DuplicatePrinterDemo:Clean;DuplicatePrinterAdvancedDemo:Clean;MergeDemo:Clean;PDFViewer:Clean;MegaDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DuplicatePrinterDemo:Make;DuplicatePrinterAdvancedDemo:Make;MergeDemo:Make;PDFViewer:Make;MegaDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
