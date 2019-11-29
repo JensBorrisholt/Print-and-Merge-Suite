@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{A158F207-0613-4190-9535-66BF8D944F9B}</ProjectGuid>
+        <ProjectGuid>{26451805-CD84-4982-A88B-0BC47F4095BB}</ProjectGuid>
         <ProjectVersion>18.7</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <MainSource>DuplicatePrinterAdvancedDemo.dpr</MainSource>

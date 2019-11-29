@@ -65,7 +65,7 @@ begin
   TDuplicatePrinter.Create(ppReport1);
 
   (*
-    On copy 2 and followinf TDuplicatePrinter will add a Watermark to your reports, saying "Duplicate"
+    On copy 2 and following TDuplicatePrinter will add a Watermark to your reports, saying "Duplicate"
 
     If you want some thing else written construct DuplicatePrinter like this:
 
